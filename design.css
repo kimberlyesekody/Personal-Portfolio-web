@@ -33,6 +33,19 @@ header a {
     margin: 30px 0 20px 0;
 }
 
+@media (max-width: 600px) {
+    .top-inner {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        padding: 0;
+        justify-content: center;
+        font-size: 14px;
+    }
+}
+
 .icon {
     padding-left: 10px;
     color: rgb(252, 51, 20, 100%);
@@ -100,7 +113,15 @@ nav ul li a:hover {
 .home-inner {
     display: flex;
     justify-content: space-around;
-    gap: 48px;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 45rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .home-inner .text {
@@ -117,6 +138,15 @@ nav ul li a:hover {
     margin-left: 80px;
     width: 45rem;
     font-weight: 300;
+    width: 100%;
+    max-width: 45rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: 0;
+    padding: 20px;
+    width: 100%;
 
 }
 
@@ -126,6 +156,16 @@ nav ul li a:hover {
     padding-right: 124px;
     padding-left: 80px;
     align-self: center;
+    margin-left: 0;
+    padding: 20px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .home-inner {
+        flex-direction: row;
+        text-align: left;
+    }
 }
 
 .home-inner .right img {
@@ -152,13 +192,23 @@ nav ul li a:hover {
     font-weight: 200;
     width: 45rem;
     justify-self: center;
+    width: 100%;
+    max-width: 45rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 
 }
 
 .about-bottom {
     margin-top: 32px;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     margin-bottom: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .about-bottom span {
@@ -185,11 +235,20 @@ nav ul li a:hover {
     font-weight: 200;
     width: 45rem;
     justify-self: center;
+    width: 100%;
+    max-width: 45rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .work-bottom {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
 .work-bottom h4 {
@@ -203,20 +262,19 @@ nav ul li a:hover {
 
 .workb {
     padding: 20px;
-    margin-top: 160px;
+    margin-top: 40px;
     border: 2px solid black;
     border-radius: 20px;
-    width: 25rem;
+    width: 100%;
+    max-width: 25rem;
     background-color: rgb(255, 212, 208, 100%);
     ;
 
 }
 
 .workb:hover {
-    /* Moves the section up by 10 pixels */
     transform: translateY(-10px);
 
-    /* Increases the shadow size and intensity for a "lifted" look */
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
@@ -257,6 +315,12 @@ nav ul li a:hover {
 .skill-top {
     width: 45rem;
     justify-self: center;
+    width: 100%;
+    max-width: 45rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .skill-top p {
@@ -289,37 +353,73 @@ nav ul li a:hover {
 /* project_detail */
 
 #project_detail {
-    padding: 80px;
+    padding: 40px 20px;
     background-color: white;
 }
 
-#project_detail h2{
+#project_detail h2 {
     text-align: center;
-    margin-bottom: 70px;
-   
+    margin-bottom: 40px;
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+
 }
 
-.project-info{
+.project-info {
     margin-top: 10px;
     display: flex;
-    gap: 10em;
+    flex-direction: column;
+    gap: 2rem;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.more{
+@media (min-width: 992px) {
+    .project-info {
+        flex-direction: row;
+    }
+}
+
+.more {
     width: 43em;
-   
+    width: 100%;
+    max-width: 45rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+
 }
 
 
-.more ul{
+.more ul {
     border: 2px solid black;
-    border-radius:  30px;
-    padding:2em 8em 2em 2em;
+    border-radius: 20px;
+    padding: 1.5rem;
+    list-style-position: inside;
 }
 
-.project-info img{
+.project-info img {
     border-radius: 10px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+}
+
+/*DESKTOP ADJUSTMENTS*/
+@media (min-width: 992px) {
+    #project_detail {
+        padding: 80px;
+    }
+
+    .project-info {
+        flex-direction: row;
+        gap: 5rem;
+    }
+
+    .more ul {
+        padding: 2em 4em 2em 2em;
+    }
 }
 
 /* project_detail */
@@ -338,6 +438,12 @@ nav ul li a:hover {
 .contact-top {
     width: 45rem;
     text-align: left;
+    width: 100%;
+    max-width: 45rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .contact-top p {
@@ -416,3 +522,21 @@ footer p {
 }
 
 /* footer */
+
+/* TABLETS (768px and up) */
+@media (min-width: 768px) {
+    .about-bottom {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* DESKTOPS (1024px and up) */
+@media (min-width: 1024px) {
+    .about-bottom {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .home-inner .left {
+        padding-left: 124px;
+    }
+}
