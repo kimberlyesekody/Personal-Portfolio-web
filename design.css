@@ -90,6 +90,10 @@ nav ul li a:hover {
     text-decoration: none;
 }
 
+.right-inner a:active {
+    color: white;
+}
+
 .right-inner a:visited {
     color: white;
 }
@@ -364,6 +368,49 @@ nav ul li a:hover {
 
 }
 
+#project_detail a h2 {
+    border: 2px solid black;
+    border-radius: 10rem;
+
+}
+
+#project_detail a h2:hover {
+    background-color: black;
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+
+}
+
+.projectb:hover {
+    transform: translateY(-10px);
+
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+#project_detail a {
+    text-decoration: none;
+
+}
+
+#project_detail a:visited {
+    color: black;
+}
+
+#project_detail a:active {
+    color: black;
+}
+
+#project_detail a:hover {
+    color: rgb(218, 55, 82);
+
+
+}
+
+/* #project_detail a h2{
+    border: 2px solid red ;
+    border-radius: 12px; 
+} */
+
 .project-info {
     margin-top: 10px;
     display: flex;
@@ -373,6 +420,7 @@ nav ul li a:hover {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 
 @media (min-width: 992px) {
     .project-info {
